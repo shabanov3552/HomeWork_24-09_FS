@@ -1,0 +1,116 @@
+    /* * {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+    }
+
+    body {
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       background: #1a1a2e;
+       color: #e0e0e0;
+       padding: 40px;
+    } */
+
+    /* h1 {
+       text-align: center;
+       margin-bottom: 30px;
+       color: #e94560;
+       font-size: 28px;
+    } */
+
+    /* Блок root */
+    /* .root-block {
+       max-width: 600px;
+       margin: 0 auto 60px;
+       background: #16213e;
+       border-radius: 12px;
+       padding: 24px;
+       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .root-block h2 {
+       color: #0f3460;
+       margin-bottom: 16px;
+       font-size: 20px;
+    } */
+
+    /* Блок дерева */
+    .tree-block {
+       /* max-width: 600px; */
+       /* margin: 0 auto; */
+       /* background: #16213e; */
+       /* border-radius: 12px; */
+       padding: 24px;
+       text-align: left;
+       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .tree-block h2 {
+       color: #e94560;
+       margin-bottom: 16px;
+       font-size: 20px;
+    }
+
+    /* Дерево */
+    .file-tree {
+       list-style: none;
+       padding-left: 20px;
+    }
+
+    .file-tree ul {
+       list-style: none;
+       padding-left: 28px;
+       border-left: 2px solid #0f3460;
+    }
+
+    .file-tree li {
+       position: relative;
+       padding: 6px 0 6px 16px;
+    }
+
+    .file-tree li::before {
+       content: '';
+       position: absolute;
+       left: 0;
+       top: 16px;
+       width: 16px;
+       height: 2px;
+       background: #0f3460;
+    }
+
+    /* Папки */
+    .folder {
+       color: #53a1e9;
+       font-weight: 600;
+       padding-left: 20px;
+    }
+
+    .folder::before {
+       content: '📁 ';
+    }
+
+    /* Файлы */
+    .file {
+       color: #a8a8b3;
+       padding-left: 20px;
+    }
+
+    .file::before {
+       content: '📄 ';
+    }
+
+    /* Корневой узел */
+    .root-node {
+       color: #e94560;
+       font-size: 18px;
+       font-weight: 700;
+       padding-left: 20px;
+    }
+
+    .root-node::before {
+       content: '🌐 ';
+    }
+
+    .root-node>ul {
+       padding-left: 28px;
+    }
