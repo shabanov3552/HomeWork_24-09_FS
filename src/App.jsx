@@ -40,7 +40,7 @@ export default function App() {
             const payload = await response.json()
             if (!cancelled) setRoot(normalizeResponse(payload))
 
-         } catch (err) {
+         } catch {
             if (!cancelled) {
                setError(
                   `Не удалось загрузить структуру файлов. Проверьте, что API доступен по ${API_URL}.`
@@ -89,7 +89,6 @@ export default function App() {
 
    const isRoot = parts.length === 0
    const title = isRoot ? 'Файловая структура' : parts[parts.length - 1]
-   const entries = Object.entries(currentNode?.children || {})
 
    return (
       <main className="page">
@@ -99,22 +98,19 @@ export default function App() {
                   <div className="eyebrow">FILE SYSTEM</div>
                   <h1>{title}</h1>
                </div>
-               <div className="count">
-                  {entries.length} {entries.length === 1 ? 'элемент' : 'элементов'}
-               </div>
             </header>
 
             <Breadcrumbs parts={parts} />
 
             {!isRoot && (
                <div className="toolbar">
-                  <Link to="/root" className="back-link">← Назад</Link>
+                  <Link to="/root" className="back-link">← К корню</Link>
                </div>
             )}
 
             <div className="content">
                {isRoot ? (
-                  <Tree node={root} >qwe</Tree>
+                  <Tree node={root} />
                ) : (
                   <div className="folder-view">
                      {Object.entries(currentNode.children || {}).map(([name, child]) => {
